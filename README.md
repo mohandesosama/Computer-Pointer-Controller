@@ -23,8 +23,8 @@ While building the flow, you will need to make sure that you are aware of the in
 
 ## Project Set Up and Installation
 ### Set up your local development environment
-#### Downloads
 
+#### Downloads
 * Download and install OpenVino toolkit from [here](https://docs.openvinotoolkit.org/latest/_docs_install_guides_installing_openvino_windows.html). I have windows 10 Pro edition. So i downloaded windows version of OpenVino. 
 * Install the dependencies: [Microsoft Visual Studio* with C++ 2019, 2017, or 2015 with MSBuild](http://visualstudio.microsoft.com/downloads/), I installed the latest version of visual studio 
 * install [CMake 3.4 or higher 64-bit](https://cmake.org/download/), If you want to use Microsoft Visual Studio 2019, you are required to install CMake 3.14. I put it on the main drive C. 
@@ -36,7 +36,21 @@ Open CMD and run the following commands
 
 <img src="./images/local-vars.png" width="400" />
 
-You still must have cmd opened for the environmet variable setup. leave cmd running while the project is running. 
+You still must keep cmd window opened for the environmet variable setup continuity. leave cmd running while the project is running. This step is successful if you see the following output
+
+<img src="./images/cmd-init.png" width="550" />
+
+#### Model Optimizer Configuration Steps
+You can configure the Model Optimizer either for all supported frameworks at once or for one framework at a time. Choose the option that best suits your needs. If you see error messages, make sure you installed all dependencies.
+These steps use a command prompt to make sure you see error messages.
+
+* Option 1: Configure the Model Optimizer for all supported frameworks at the same time:
+- Open a command prompt. To do so, type cmd in your Search Windows box and then press Enter. Type commands in the opened window:
+- Go to the Model Optimizer prerequisites directory.
+`cd C:\Program Files (x86)\IntelSWTools\openvino\deployment_tools\model_optimizer\install_prerequisites`
+- Run the following batch file to configure the Model Optimizer for Caffe*, TensorFlow*, MXNet*, Kaldi*, and ONNX*:
+`install_prerequisites.bat`
+
 
 
 ## Demo
