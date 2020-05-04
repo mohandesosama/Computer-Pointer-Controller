@@ -22,7 +22,22 @@ You will have to coordinate the flow of data from the input, and then amongst th
 While building the flow, you will need to make sure that you are aware of the input and output shapes of each model. If the shapes or data format are different for a particular model, you can account for this in the preprocessing methods (will go over this in more detail shortly).
 
 ## Project Set Up and Installation
-*TODO:* Explain the setup procedures to run your project. For instance, this can include your project directory structure, the models you need to download and where to place them etc. Also include details about how to install the dependencies your project requires.
+### Set up your local development environment
+#### Downloads
+
+* Download and install OpenVino toolkit from [here](https://docs.openvinotoolkit.org/latest/_docs_install_guides_installing_openvino_windows.html). I have windows 10 Pro edition. So i downloaded windows version of OpenVino. 
+* Install the dependencies: [Microsoft Visual Studio* with C++ 2019, 2017, or 2015 with MSBuild](http://visualstudio.microsoft.com/downloads/), I installed the latest version of visual studio 
+* install [CMake 3.4 or higher 64-bit](https://cmake.org/download/), If you want to use Microsoft Visual Studio 2019, you are required to install CMake 3.14. I put it on the main drive C. 
+* Install [python 3.6](https://www.python.org/downloads/release/python-360/), direct link [Windows x86-64 executable installer](https://www.python.org/ftp/python/3.6.0/python-3.6.0-amd64.exe)
+
+#### Setup Environment Variables
+Open CMD and run the following commands 
+`cd C:\Program Files (x86)\IntelSWTools\openvino\bin\` and then `setupvars.bat`, you might be faced with python 3.6 is not detected, you have to put the path of python together with the path of pip3 as shown in the figure 
+
+<img src="./images/local-vars.png" width="400" />
+
+You still must have cmd opened for the environmet variable setup. leave cmd running while the project is running. 
+
 
 ## Demo
 *TODO:* Explain how to run a basic demo of your model.
