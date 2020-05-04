@@ -45,11 +45,11 @@ You can configure the Model Optimizer either for all supported frameworks at onc
 These steps use a command prompt to make sure you see error messages.
 
 * Option 1: Configure the Model Optimizer for all supported frameworks at the same time:
-- Open a command prompt. To do so, type cmd in your Search Windows box and then press Enter. Type commands in the opened window:
-- Go to the Model Optimizer prerequisites directory.
-`cd C:\Program Files (x86)\IntelSWTools\openvino\deployment_tools\model_optimizer\install_prerequisites`
-- Run the following batch file to configure the Model Optimizer for Caffe*, TensorFlow*, MXNet*, Kaldi*, and ONNX*:
-`install_prerequisites.bat`
+    - Open a command prompt. To do so, type cmd in your Search Windows box and then press Enter. Type commands in the opened window:
+    - Go to the Model Optimizer prerequisites directory.
+    `cd C:\Program Files (x86)\IntelSWTools\openvino\deployment_tools\model_optimizer\install_prerequisites`
+    - Run the following batch file to configure the Model Optimizer for Caffe*, TensorFlow*, MXNet*, Kaldi*, and ONNX*:
+    `install_prerequisites.bat`
 
 
 
