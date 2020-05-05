@@ -32,6 +32,7 @@ While building the flow, you will need to make sure that you are aware of the in
 * Install the dependencies: [Microsoft Visual Studio* with C++ 2019, 2017, or 2015 with MSBuild](http://visualstudio.microsoft.com/downloads/), I installed the latest version of visual studio 
 * install [CMake 3.4 or higher 64-bit](https://cmake.org/download/), If you want to use Microsoft Visual Studio 2019, you are required to install CMake 3.14. I put it on the main drive C. 
 * Install [python 3.6](https://www.python.org/downloads/release/python-360/), direct link [Windows x86-64 executable installer](https://www.python.org/ftp/python/3.6.0/python-3.6.0-amd64.exe)
+* If you use Visual Studio 2017 / 2019 (i'm using 2019), please download and install build tools from [here](https://www.visualstudio.com/downloads/#build-tools-for-visual-studio-2017)
 
 #### Setup Environment Variables
 Open CMD and run the following commands 
@@ -71,7 +72,41 @@ These steps use a command prompt to make sure you see error messages.
 
 The Model Optimizer is configured for one or more frameworks. Success is indicated by a screen similar to this:
 
+<img src="./images/tf-setup.png" width="550" />
 
+#### Running demo samples to confirm the installation
+* Open a command prompt window.
+* Go to the Inference Engine demo directory:
+`cd C:\Program Files (x86)\IntelSWTools\openvino\deployment_tools\demo\`
+* Run the Image Classification Verification Script, To run the script, start the demo_squeezenet_download_convert_run.bat file:
+`demo_squeezenet_download_convert_run.bat`
+* Don't worry if you faced an error such as 
+```
+[ ERROR ] Error loading XML file: C:\Users\Osama\Documents\Intel\OpenVINO\openvino_models\ir\public\squeezenet1.1\FP16\squeezenet1.1.xml:1:0: File was not found
+Error
+```
+* Run the Inference Pipeline Verification Script, To run the script, start the demo_security_barrier_camera.bat file while still in the console:
+`demo_security_barrier_camera.bat`
+
+As verification you should see the following image: 
+
+<img src="./images/car-detected.png" width="500" />
+
+Finally!!!! your machine is ready to run ready made models. 
+
+### Download the starter files
+We've provided some helpful starter files that you'll need for the project. You can download them [here](https://video.udacity-data.com/topher/2020/April/5e974e37_starter/starter.zip).
+
+### Set up your webcam (or locate the optional video file)
+To do the gaze estimation, we'll need a video feed. You can either use a webcam stream as input to your model or, if you prefer, you can use the [video file](./bin/demo.mp4) that we've provided (this is located in the bin folder of this repo).
+
+### Download the models
+These can be downloaded using the `model downloader`. The models you will need are:
+
+* [Face Detection](https://docs.openvinotoolkit.org/latest/_models_intel_face_detection_adas_binary_0001_description_face_detection_adas_binary_0001.html)
+* [Head Pose Estimation](https://docs.openvinotoolkit.org/latest/_models_intel_head_pose_estimation_adas_0001_description_head_pose_estimation_adas_0001.html)
+* [Facial Landmarks Detection.](https://docs.openvinotoolkit.org/latest/_models_intel_landmarks_regression_retail_0009_description_landmarks_regression_retail_0009.html)
+* [Gaze Estimation Model](https://docs.openvinotoolkit.org/latest/_models_intel_gaze_estimation_adas_0002_description_gaze_estimation_adas_0002.html)
 
 ## Demo
 *TODO:* Explain how to run a basic demo of your model.
