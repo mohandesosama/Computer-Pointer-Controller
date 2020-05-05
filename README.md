@@ -22,7 +22,7 @@ You will have to coordinate the flow of data from the input, and then amongst th
 
 <img src="./images/pipeline.png" width="500" />
 
-While building the flow, you will need to make sure that you are aware of the input and output shapes of each model. If the shapes or data format are different for a particular model, you can account for this in the preprocessing methods (will go over this in more detail shortly).
+While building the flow, you will need to make sure that you are aware of the input and output shapes of each model. If the shapes or data format are different for a particular model, you can account for this in the preprocessing methods.
 
 ## Project Set Up and Installation
 ### Set up your local development environment
@@ -107,6 +107,15 @@ These can be downloaded using the `model downloader`. The models you will need a
 * [Head Pose Estimation](https://docs.openvinotoolkit.org/latest/_models_intel_head_pose_estimation_adas_0001_description_head_pose_estimation_adas_0001.html)
 * [Facial Landmarks Detection.](https://docs.openvinotoolkit.org/latest/_models_intel_landmarks_regression_retail_0009_description_landmarks_regression_retail_0009.html)
 * [Gaze Estimation Model](https://docs.openvinotoolkit.org/latest/_models_intel_gaze_estimation_adas_0002_description_gaze_estimation_adas_0002.html)
+
+To download each model, follow the following steps 
+* From windows cmd, go to the following path
+`cd C:\Program Files (x86)\IntelSWTools\openvino_2020.2.117\deployment_tools\tools\model_downloader`
+use downloader.py, but I got more fast way
+
+* Download the required models form the [here](https://download.01.org/opencv/2019/open_model_zoo/R1/20190404_140900_models_bin/) 
+    * [Face Detection](https://download.01.org/opencv/2019/open_model_zoo/R1/20190404_140900_models_bin/face-detection-adas-binary-0001/INT1/)
+
 
 ## Demo
 *TODO:* Explain how to run a basic demo of your model.
