@@ -4,7 +4,7 @@ In this project, you will use a gaze detection model to control the mouse pointe
 
 <img src="./images/main-img.png" width="500" />
 
-### How it works
+### How is it working
 You will be using the InferenceEngine API from Intel's OpenVino ToolKit to build the project. The gaze estimation model requires three inputs:
 
 * The head pose
